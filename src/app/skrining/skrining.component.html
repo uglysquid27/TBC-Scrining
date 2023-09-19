@@ -28,8 +28,8 @@
         </ul>
     </div>
     <div class="relative isolate pt-24 lg:px-8">
-        <div class="flex flex-col ">
-            <div class="px-20">
+       <!-- <div class="flex flex-col ">
+             <div class="px-20">
                 <label for="nama" class="mb-2 inline-block text-gray-500">Nama Lengkap</label>
                 <div class="relative mb-4 flex flex-wrap items-stretch">
                     <input type="text"
@@ -55,8 +55,8 @@
                         placeholder="Pekerjaan" aria-label="pekerjaan" aria-describedby="basic-addon1" />
                 </div>
 
-                <div class="grid grid-cols-2">
-                    <div class="w-1/2">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    <div class="w-2/2 lg:w-1/2">
                         <label for="lahir" class="mb-2 inline-block text-gray-500">Tanggal Lahir</label>
                         <div class="relative mb-4 flex flex-wrap items-stretch">
                             <input type="date"
@@ -64,12 +64,11 @@
                                 placeholder="lahir" aria-label="lahir" aria-describedby="basic-addon1" />
                         </div>
                     </div>
-                    <div class="w-1/2">
+                    <div class="w-2/2 lg:w-1/2">
                         <label for="kelamin" class="mb-2 inline-block text-gray-500">Jenis Kelamin</label>
-                        <div class="relative mb-4 flex flex-wrap items-stretch">
-                            <input type="Text"
-                                class="relative m-0 block w-[1px] min-w-0 flex-auto rounded border border-solid border-gray-500 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-gray-500 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-gray-500 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:placeholder:text-neutral-200 dark:focus:border-primary"
-                                placeholder="kelamin" aria-label="kelamin" aria-describedby="basic-addon1" />
+                        <div class="relative mb-4 gap-4 flex flex-wrap items-stretch">
+                            <input type="radio" name="radio-4" class="radio radio-accent" checked /> Laki-laki
+                            <input type="radio" name="radio-4" class="radio radio-accent" />Perempuan
                         </div>
                     </div>
                 </div>
@@ -86,6 +85,80 @@
                         placeholder="email@email.com" aria-label="email" aria-describedby="basic-addon1" />
                 </div>
 
+            </div> 
+            
+        </div>-->
+        <div class="flex flex-col justify-items-center">
+            <label for="email" class="mb-2 inline-block text-center text-gray-600 text-xl font-bold">Gejala Utama</label>
+            <div class="grid grid-cols-2 py-4 justify-end px-96">
+                <div class="w-full">
+                    Batuk (Semua batuk tanpa melihat durasi)
+                </div>
+                <div class="w-full relative mb-4 gap-4 flex flex-wrap justify-end">
+                    <input type="radio" name="radio-4" class="radio radio-accent" checked /> Ya
+                    <input type="radio" name="radio-4" class="radio radio-accent" />Tidak
+                </div>
+            </div>
+            <label for="email" class="mb-2 inline-block text-center text-gray-600 text-xl font-bold">Gejala Tambahan</label>
+            <div class="grid grid-cols-2 py-4 justify-end px-96">
+                <div class="w-full">
+                    BB Turun tanpa penyebab jelas/BB tidak naik/nafsu makan turun
+                </div>
+                <div class="w-full relative mb-4 gap-4 flex flex-wrap justify-end">
+                    <input type="radio" name="radio-4" class="radio radio-accent" checked /> Ya
+                    <input type="radio" name="radio-4" class="radio radio-accent" />Tidak
+                </div>
+            </div>
+            <div class="grid grid-cols-2 py-4 justify-end px-96">
+                <div class="w-full">
+                    Demam yang tidak diketahui penyebabnya
+                </div>
+                <div class="w-full relative mb-4 gap-4 flex flex-wrap justify-end">
+                    <input type="radio" name="radio-4" class="radio radio-accent" checked /> Ya
+                    <input type="radio" name="radio-4" class="radio radio-accent" />Tidak
+                </div>
+            </div>
+            <div class="grid grid-cols-2 py-4 justify-end px-96">
+                <div class="w-full">
+                    Badan lemas/lesu
+                </div>
+                <div class="w-full relative mb-4 gap-4 flex flex-wrap justify-end">
+                    <input type="radio" name="radio-4" class="radio radio-accent" checked /> Ya
+                    <input type="radio" name="radio-4" class="radio radio-accent" />Tidak
+                </div>
+            </div>
+            <div class="grid grid-cols-2 py-4 justify-end px-96">
+                <div class="w-full">
+                    Berkeringat malam hari tanpa kegiatan
+                </div>
+                <div class="w-full relative mb-4 gap-4 flex flex-wrap justify-end">
+                    <input type="radio" name="radio-4" class="radio radio-accent" checked /> Ya
+                    <input type="radio" name="radio-4" class="radio radio-accent" />Tidak
+                </div>
+            </div>
+            <div class="grid grid-cols-2 py-4 justify-end px-96">
+                <div class="w-full">
+                    Sesak napas tanpa nyeri dada
+                </div>
+                <div class="w-full relative mb-4 gap-4 flex flex-wrap justify-end">
+                    <input type="radio" name="radio-4" class="radio radio-accent" checked /> Ya
+                    <input type="radio" name="radio-4" class="radio radio-accent" />Tidak
+                </div>
+            </div>
+            <div class="grid grid-cols-2 py-4 justify-end px-96">
+                <div class="w-full">
+                    Ada pembesaran getah bening di leher atau ketiak
+                </div>
+                <div class="w-full relative mb-4 gap-4 flex flex-wrap justify-end">
+                    <input type="radio" name="radio-4" class="radio radio-accent" checked /> Ya
+                    <input type="radio" name="radio-4" class="radio radio-accent" />Tidak
+                </div>
+            </div>
+            <div class="grid grid-cols-1 py-4 justify-end px-96">
+                <div class="w-full py-2 text-gray-600">
+                    Lainnya(Sebutkan)
+                </div>
+                <input type="text" placeholder="Gejala lain" class="py-2 input input-bordered input-lg w-full" />
             </div>
         </div>
     </div>
