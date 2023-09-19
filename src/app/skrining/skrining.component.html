@@ -7,45 +7,85 @@
 
 <header class="bg-gray-50 h-42">
     <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
-      <div class="sm:flex sm:items-center sm:justify-center">
-        <div class="text-center sm:text-left">
-          <h1 class="text-2xl font-bold text-gray-900 sm:text-3xl text-center">
-            TBC Skrining
-          </h1>
-  
-          <p class="mt-1.5 text-sm text-gray-500">
-            Ayo mulai lakukan skrining sejak dini untuk gejala TBC!
-          </p>
+        <div class="sm:flex sm:items-center sm:justify-center">
+            <div class="text-center sm:text-left">
+                <h1 class="text-2xl font-bold text-gray-900 sm:text-3xl text-center">
+                    TBC Skrining
+                </h1>
+
+                <p class="mt-1.5 text-sm text-gray-500">
+                    Ayo mulai lakukan skrining sejak dini untuk gejala TBC!
+                </p>
+            </div>
         </div>
-      </div>
     </div>
-  </header>
+</header>
 <div class="bg-white h-screen">
     <div class="grid grid-cols-1 pt-8">
         <ul class="steps">
             <li class="step step-primary text-gray-600">Isi data diri</li>
             <li class="step text-gray-600">Skrining</li>
-          </ul>
+        </ul>
     </div>
-    <div class="relative isolate px-6 pt-24 lg:px-8">
-        <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-            aria-hidden="true">
-            <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-green-600 to-cyan-400 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-                style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+    <div class="relative isolate pt-24 lg:px-8">
+        <div class="flex flex-col ">
+            <div class="px-20">
+                <label for="nama" class="mb-2 inline-block text-gray-500">Nama Lengkap</label>
+                <div class="relative mb-4 flex flex-wrap items-stretch">
+                    <input type="text"
+                        class="relative m-0 block w-[1px] min-w-0 flex-auto rounded border border-solid border-gray-500 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-gray-500 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-gray-500 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:placeholder:text-neutral-200 dark:focus:border-primary"
+                        placeholder="Name" aria-label="Username" aria-describedby="basic-addon1" />
+                </div>
+                <label for="alamat" class="mb-2 inline-block text-gray-500">Alamat</label>
+                <div class="relative mb-4 flex flex-wrap items-stretch">
+                    <input type="text"
+                        class="relative m-0 block w-[1px] min-w-0 flex-auto rounded border border-solid border-gray-500 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-gray-500 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-gray-500 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:placeholder:text-neutral-200 dark:focus:border-primary"
+                        placeholder="Address" aria-label="Address" aria-describedby="basic-addon1" />
+                </div>
+                <label for="nik" class="mb-2 inline-block text-gray-500">NIK</label>
+                <div class="relative mb-4 flex flex-wrap items-stretch">
+                    <input type="text"
+                        class="relative m-0 block w-[1px] min-w-0 flex-auto rounded border border-solid border-gray-500 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-gray-500 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-gray-500 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:placeholder:text-neutral-200 dark:focus:border-primary"
+                        placeholder="NIK" aria-label="nik" aria-describedby="basic-addon1" />
+                </div>
+                <label for="pekerjaan" class="mb-2 inline-block text-gray-500">Pekerjaan</label>
+                <div class="relative mb-4 flex flex-wrap items-stretch">
+                    <input type="text"
+                        class="relative m-0 block w-[1px] min-w-0 flex-auto rounded border border-solid border-gray-500 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-gray-500 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-gray-500 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:placeholder:text-neutral-200 dark:focus:border-primary"
+                        placeholder="Pekerjaan" aria-label="pekerjaan" aria-describedby="basic-addon1" />
+                </div>
+
+                <div class="grid grid-cols-2">
+                    <div class="w-1/2">
+                        <label for="lahir" class="mb-2 inline-block text-gray-500">Tanggal Lahir</label>
+                        <div class="relative mb-4 flex flex-wrap items-stretch">
+                            <input type="date"
+                                class="relative m-0 block w-[1px] min-w-0 flex-auto rounded border border-solid border-gray-500 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-gray-500 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-gray-500 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:placeholder:text-neutral-200 dark:focus:border-primary"
+                                placeholder="lahir" aria-label="lahir" aria-describedby="basic-addon1" />
+                        </div>
+                    </div>
+                    <div class="w-1/2">
+                        <label for="kelamin" class="mb-2 inline-block text-gray-500">Jenis Kelamin</label>
+                        <div class="relative mb-4 flex flex-wrap items-stretch">
+                            <input type="Text"
+                                class="relative m-0 block w-[1px] min-w-0 flex-auto rounded border border-solid border-gray-500 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-gray-500 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-gray-500 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:placeholder:text-neutral-200 dark:focus:border-primary"
+                                placeholder="kelamin" aria-label="kelamin" aria-describedby="basic-addon1" />
+                        </div>
+                    </div>
+                </div>
+                <label for="no" class="mb-2 inline-block text-gray-500">No HP</label>
+                <div class="relative mb-4 flex flex-wrap items-stretch">
+                    <input type="text"
+                        class="relative m-0 block w-[1px] min-w-0 flex-auto rounded border border-solid border-gray-500 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-gray-500 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-gray-500 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:placeholder:text-neutral-200 dark:focus:border-primary"
+                        placeholder="no" aria-label="no" aria-describedby="basic-addon1" />
+                </div>
+                <label for="email" class="mb-2 inline-block text-gray-500">Email</label>
+                <div class="relative mb-4 flex flex-wrap items-stretch">
+                    <input type="email"
+                        class="relative m-0 block w-[1px] min-w-0 flex-auto rounded border border-solid border-gray-500 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-gray-500 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-gray-500 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:placeholder:text-neutral-200 dark:focus:border-primary"
+                        placeholder="email@email.com" aria-label="email" aria-describedby="basic-addon1" />
+                </div>
+
             </div>
         </div>
-        <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-            <!-- <div class="hidden sm:mb-8 sm:flex sm:justify-center">
-          <div class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-            Announcing our next round of funding. <a href="#" class="font-semibold text-indigo-600"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
-          </div>
-        </div> -->
-        
-        <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
-            aria-hidden="true">
-            <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-green-600 to-cyan-400 opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
-                style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
-            </div>
-        </div>
     </div>
-</div>
