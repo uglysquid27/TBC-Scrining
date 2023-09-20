@@ -6,7 +6,7 @@
 -->
 
 <header class="bg-gray-50 h-42">
-    <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+    <div class="mx-auto max-w-screen-xl px-4 py-8 max-sm:px-6 sm:py-12 lg:px-8">
         <div class="sm:flex sm:items-center sm:justify-center">
             <div class="text-center sm:text-left">
                 <h1 class="text-2xl font-bold text-gray-900 sm:text-3xl text-center">
@@ -20,15 +20,19 @@
         </div>
     </div>
 </header>
-<div class="bg-white h-screen">
+<div class="flex bg-white flex-col justify-items-center h-screen overflow-y-auto">
     <div class="grid grid-cols-1 pt-8">
         <ul class="steps">
             <li class="step step-accent text-gray-600">Isi data diri</li>
-            <li class="step step-accent text-gray-600">Skrining</li>
+            <li [ngClass]="!skrining ? '' : 'step-accent'" class="step text-gray-600">Skrining</li>
         </ul>
     </div>
-    <div class="relative isolate pt-24 lg:px-8">
-       <!-- <div class="flex flex-col ">
+    <div class="flex justify-center items-center gap-4 py-8">
+        <button (click)="ddChange()" class="btn btn-accent">Data Diri</button>
+        <button (click)="skringingChange()" class="btn btn-accent">Skrining</button>
+    </div>
+    <div class="relative isolate  lg:px-8">
+       <div [ngClass]="datadiri ? '' : 'hidden'" class="flex flex-col ">
              <div class="px-20">
                 <label for="nama" class="mb-2 inline-block text-gray-500">Nama Lengkap</label>
                 <div class="relative mb-4 flex flex-wrap items-stretch">
@@ -87,79 +91,83 @@
 
             </div> 
             
-        </div>-->
-        <div class="flex flex-col justify-items-center">
+        </div>
+        <div  [ngClass]="skrining ? '' : 'hidden'" class="flex flex-col justify-items-center ">
             <h1 class="text-center font-bold text-gray-600 text-2xl pb-8">SKRINING GEJALA</h1>
             <label for="email" class="mb-2 inline-block text-center text-gray-600 text-xl font-bold">Gejala Utama</label>
-            <div class="grid grid-cols-2 py-4 justify-end px-96">
+            <div class="grid grid-cols-2 py-4 justify-end lg:px-96 max-sm:px-6">
                 <div class="w-full">
                     Batuk (Semua batuk tanpa melihat durasi)
                 </div>
                 <div class="w-full relative mb-4 gap-4 flex flex-wrap justify-end">
-                    <input type="radio" name="radio-4" class="radio radio-accent"  /> Ya
-                    <input type="radio" name="radio-4" class="radio radio-accent" />Tidak
+                    <input type="radio" name="utama" class="radio radio-accent"  /> Ya
+                    <input type="radio" name="utama" class="radio radio-accent" />Tidak
                 </div>
             </div>
             <label for="email" class="mb-2 inline-block text-center text-gray-600 text-xl font-bold">Gejala Tambahan</label>
-            <div class="grid grid-cols-2 py-4 justify-end px-96">
+            <div class="grid grid-cols-2 py-4 justify-end lg:px-96 max-sm:px-6">
                 <div class="w-full">
                     BB Turun tanpa penyebab jelas/BB tidak naik/nafsu makan turun
                 </div>
                 <div class="w-full relative mb-4 gap-4 flex flex-wrap justify-end">
-                    <input type="radio" name="radio-4" class="radio radio-accent"  /> Ya
-                    <input type="radio" name="radio-4" class="radio radio-accent" />Tidak
+                    <input type="radio" name="bb" class="radio radio-accent"  /> Ya
+                    <input type="radio" name="bb" class="radio radio-accent" />Tidak
                 </div>
             </div>
-            <div class="grid grid-cols-2 py-4 justify-end px-96">
+            <div class="grid grid-cols-2 py-4 justify-end lg:px-96 max-sm:px-6">
                 <div class="w-full">
                     Demam yang tidak diketahui penyebabnya
                 </div>
                 <div class="w-full relative mb-4 gap-4 flex flex-wrap justify-end">
-                    <input type="radio" name="radio-4" class="radio radio-accent"  /> Ya
-                    <input type="radio" name="radio-4" class="radio radio-accent" />Tidak
+                    <input type="radio" name="demam" class="radio radio-accent"  /> Ya
+                    <input type="radio" name="demam" class="radio radio-accent" />Tidak
                 </div>
             </div>
-            <div class="grid grid-cols-2 py-4 justify-end px-96">
+            <div class="grid grid-cols-2 py-4 justify-end lg:px-96 max-sm:px-6">
                 <div class="w-full">
                     Badan lemas/lesu
                 </div>
                 <div class="w-full relative mb-4 gap-4 flex flex-wrap justify-end">
-                    <input type="radio" name="radio-4" class="radio radio-accent"  /> Ya
-                    <input type="radio" name="radio-4" class="radio radio-accent" />Tidak
+                    <input type="radio" name="lemas" class="radio radio-accent"  /> Ya
+                    <input type="radio" name="lemas" class="radio radio-accent" />Tidak
                 </div>
             </div>
-            <div class="grid grid-cols-2 py-4 justify-end px-96">
+            <div class="grid grid-cols-2 py-4 justify-end lg:px-96 max-sm:px-6">
                 <div class="w-full">
                     Berkeringat malam hari tanpa kegiatan
                 </div>
                 <div class="w-full relative mb-4 gap-4 flex flex-wrap justify-end">
-                    <input type="radio" name="radio-4" class="radio radio-accent"  /> Ya
-                    <input type="radio" name="radio-4" class="radio radio-accent" />Tidak
+                    <input type="radio" name="keringat" class="radio radio-accent"  /> Ya
+                    <input type="radio" name="keringat" class="radio radio-accent" />Tidak
                 </div>
             </div>
-            <div class="grid grid-cols-2 py-4 justify-end px-96">
+            <div class="grid grid-cols-2 py-4 justify-end lg:px-96 max-sm:px-6">
                 <div class="w-full">
                     Sesak napas tanpa nyeri dada
                 </div>
                 <div class="w-full relative mb-4 gap-4 flex flex-wrap justify-end">
-                    <input type="radio" name="radio-4" class="radio radio-accent"  /> Ya
-                    <input type="radio" name="radio-4" class="radio radio-accent" />Tidak
+                    <input type="radio" name="nyeri" class="radio radio-accent"  /> Ya
+                    <input type="radio" name="nyeri" class="radio radio-accent" />Tidak
                 </div>
             </div>
-            <div class="grid grid-cols-2 py-4 justify-end px-96">
+            <div class="grid grid-cols-2 py-4 justify-end lg:px-96 max-sm:px-6">
                 <div class="w-full">
                     Ada pembesaran getah bening di leher atau ketiak
                 </div>
                 <div class="w-full relative mb-4 gap-4 flex flex-wrap justify-end">
-                    <input type="radio" name="radio-4" class="radio radio-accent"  /> Ya
-                    <input type="radio" name="radio-4" class="radio radio-accent" />Tidak
+                    <input type="radio" name="getah" class="radio radio-accent"  /> Ya
+                    <input type="radio" name="getah" class="radio radio-accent" />Tidak
                 </div>
             </div>
-            <div class="grid grid-cols-1 py-4 justify-end px-96">
+            <div class="grid grid-cols-1 py-4 justify-end lg:px-96 max-sm:px-6">
                 <div class="w-full py-2 text-gray-600">
                     Lainnya(Sebutkan)
                 </div>
                 <input type="text" placeholder="Gejala lain" class="py-2 input input-bordered input-lg w-full" />
             </div>
         </div>
+        <div [ngClass]="skrining ? '' : 'hidden'" class="flex justify-center items-center gap-4 py-8">
+            <button routerLink="/hasil" class="btn btn-accent">Submit</button>
+        </div>
     </div>
+</div>
